@@ -1,4 +1,8 @@
 # Kernel
+0. 依赖
+```
+apt install make pkg-config libncurses-dev flex bison libssl-dev libelf-dev
+```
 1. 下载  
 [源码](https://mirrors.edge.kernel.org/pub/linux/kernel/)
 2. *指定硬件架构**
