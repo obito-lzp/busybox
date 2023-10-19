@@ -1,4 +1,4 @@
-# Kernel
+Kernel
 0. 依赖
 ```
 apt install make pkg-config libncurses-dev flex bison libssl-dev libelf-dev
@@ -16,14 +16,17 @@ make menuconfig
 ```
 4. 编译
 ```
-make -j
+make -j  // 内核路径：arch/x86_64/boot/bzImage
 ```
-
-5. 编译完成  
-内核路径：arch/x86_64/boot/bzImage
-
-6. 替换内核
+5. 模块安装
 ```
 make INSTALL_MOD_STRIP=1 modules_install
+```
+6. 制作initrd.img
+```
+mkinitramfs 5.15.0-25-generic -o /boot/initrd.img  // "/lib/modules/5.15.0-25-generic"
+```
+7. 内核安装
+```
 make install
 ```
