@@ -29,3 +29,12 @@
 # vim /etc/fstab
     在最后插入
     UUID="85bcf566-3814-4df6-8939-4cfb81ba678c" /home/'user' ext4 defaults 0 2
+# pip指定源
+```
+-i https://pypi.tuna.tsinghua.edu.cn/simple --trusted-host pypi.tuna.tsinghua.edu.cn
+```
+
+# lib路径
+```
+export LD_LIBRARY_PATH=/root/app/output:$LD_LIBRARY_PATH
+```
